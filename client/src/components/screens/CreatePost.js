@@ -41,7 +41,7 @@ const CreatePost = () => {
     const postDetails = () => {
         const data = new FormData()
         data.append("file",image)
-        data.append("upload_preset","instaApp")
+        data.append("upload_preset","InstaBook")
         data.append("cloud_name","devmri01")
         fetch("https://api.cloudinary.com/v1_1/devmri01/image/upload",{
             method:"post",

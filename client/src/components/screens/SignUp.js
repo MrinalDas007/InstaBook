@@ -51,7 +51,7 @@ const SignUp = () =>{
     const uploadPic = () => {
         const data = new FormData()
         data.append("file",image)
-        data.append("upload_preset","instaApp")
+        data.append("upload_preset","InstaBook")
         data.append("cloud_name","devmri01")
         fetch("https://api.cloudinary.com/v1_1/devmri01/image/upload",{
             method:"post",
@@ -76,7 +76,7 @@ const SignUp = () =>{
     return(
         <div className="mycard">
             <div className="card auth-card input-field">
-                <h2>Instagram</h2>
+                <h2>InstaBook</h2>
                 <input type ="text" placeholder = "Name" value={name} onChange={(e)=>setName(e.target.value)}/>
                 <input type ="text" placeholder = "Email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
                 <input type ="password" placeholder = "Password" value={password} onChange={(e)=>setPassword(e.target.value)}/>

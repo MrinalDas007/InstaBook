@@ -1,9 +1,9 @@
 import React,{useState, useEffect} from 'react'
-import {useNavigate} from 'react-router-dom'
+import {useHistory} from 'react-router-dom'
 import M from 'materialize-css'
 
 const CreatePost = () => {
-    const history = useNavigate()
+    const history = useHistory()
     const [title,setTitle] = useState("")
     const [body,setBody] = useState("")
     const [image,setImage] = useState("")

@@ -1,10 +1,10 @@
 import React,{useContext} from 'react'
-import {Link, useNavigate} from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
 import {UserContext} from '../App'
 
 const NavBar = () => {
     const {state,dispatch} = useContext(UserContext)
-    const history = useNavigate()
+    const history = useHistory()
     const renderList = ()=>{
         if(state){
             return [

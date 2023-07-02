@@ -1,7 +1,7 @@
 import React,{useEffect,useContext,createContext,useReducer} from 'react';
 import NavBar from './components/Navbar'
 import "./App.css"
-import {BrowserRouter,Route, Switch,useHistory} from 'react-router-dom'
+import {BrowserRouter,Route, Routes,useNavigate} from 'react-router-dom'
 import Home from './components/screens/Home'
 import SignIn from './components/screens/Login'
 import Profile from './components/screens/Profile'
@@ -14,7 +14,7 @@ import SubscribesUserPost from './components/screens/SubcribesUserPost'
 export const UserContext = createContext()
 
 const Routing = ()=>{
-  const history = useHistory()
+  const history = useNavigate()
   const {state,dispatch} = useContext(UserContext)
   useEffect(()=>{
     const user = JSON.parse(localStorage.getItem("user"))
@@ -28,7 +28,7 @@ const Routing = ()=>{
     }
   },[])
   return (
-    <Switch>
+    <Routes>
       <Route exact path="/">
         <Home/>
       </Route>
@@ -50,7 +50,7 @@ const Routing = ()=>{
       <Route path="/mysubcribedposts">
         <SubscribesUserPost/>
       </Route>
-    </Switch>
+    </Routes>
   );
 }
 

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import {Link,useHistory} from 'react-router-dom'
+import {Link,useNavigate} from 'react-router-dom'
 import M from 'materialize-css'
 
 const SignUp = () =>{
-    const history = useHistory()
+    const history = useNavigate()
     const [name,setName] = useState("")
     const [password,setPassword] = useState("")
     const [email,setEmail] = useState("")

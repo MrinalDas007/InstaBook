@@ -1,11 +1,11 @@
 import React, { useState,useContext } from 'react';
-import {Link,useHistory} from 'react-router-dom'
+import {Link,useNavigate} from 'react-router-dom'
 import M from 'materialize-css'
 import {UserContext} from '../../App'
 
 const Login = () =>{
     const {state,dispatch} = useContext(UserContext)
-    const history = useHistory()
+    const history = useNavigate()
     const [password,setPassword] = useState("")
     const [email,setEmail] = useState("")
     
